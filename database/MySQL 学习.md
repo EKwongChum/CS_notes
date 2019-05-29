@@ -48,7 +48,7 @@ create user <username>@'<hostname>' identified by '<password>';
 授予用户权限：
 
 ```shell
-grant create,insert,update on <db_name>.* to <username>@'<hostname>' identified by '<password>';
+grant create,insert,update on <db_name>.* to '<username>'@'<hostname>' identified by '<password>';
 ```
 
 查看所有的用户：

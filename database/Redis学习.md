@@ -29,13 +29,19 @@ GET name // "ekwong"
 创建一个key为ek的hash类型：
 
 ```shell
-HSET ek field1 "Good" field2 "morning" // (integer) 1
+HMSET ek field1 "Good" field2 "morning" // (integer) 1
 ```
 
 获取key为ek的hash的field1域的值：
 
 ```shell
 HGET ek field1 // "Good"
+```
+
+获取key为ek的hash的所有的域和值：
+
+```shell
+HGETALL ek
 ```
 
 #### List
@@ -117,3 +123,10 @@ HGET ek field1 // "Good"
 8) "it"
 ```
 
+## 登录
+
+登录远程服务器
+
+```shell
+redis-cli -h host -p port -a password
+```
