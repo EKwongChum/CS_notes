@@ -130,3 +130,10 @@ HGETALL ek
 ```shell
 redis-cli -h host -p port -a password
 ```
+
+启动服务
+
+``` shell
+redis-server 
+```
+
