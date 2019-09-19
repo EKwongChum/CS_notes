@@ -45,6 +45,9 @@ mysql -u root -p
 create user <username>@'<hostname>' identified by '<password>';
 ```
 
+如果需要允许任意IP登陆，传入 % 给hostname；
+
+
 授予用户权限：
 
 ```shell
