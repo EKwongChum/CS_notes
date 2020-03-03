@@ -32,10 +32,10 @@ systemctl enable mysql
 #### 登录MySQL：
 
 ```shell
-mysql -u root -p
+mysql -u <username> -p
 ```
 
-这里的root可以替换成你的用户名。
+然后根据提示输入密码
 
 #### 用户管理
 
@@ -51,7 +51,7 @@ create user <username>@'<hostname>' identified by '<password>';
 授予用户权限：
 
 ```shell
-grant create,insert,update on <db_name>.* to '<username>'@'<hostname>' identified by '<password>';
+grant create,insert,update on <db_name>.* to '<username>'@'<hostname>';
 ```
 
 查看所有的用户：
