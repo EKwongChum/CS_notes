@@ -20,7 +20,7 @@ Kube-proxy：负责写入规则至IPTABLES、IPVS，实现服务映射访问；
 
 #####　其它组件
 
-coreDNS ：可以为集群中的ＳＶＣ创建一个域名与ＩＰ的对应关系解析，是实现负载功能的其中一项
+coreDNS ：可以为集群中的SVC创建一个域名与IP的对应关系解析，是实现负载功能的其中一项
 
 Dashboard 为K8S集群提供了一个Ｂ/S结构访问体系；
 
@@ -37,3 +37,40 @@ ELK :　提供K8S集群日志统一分析接入平台；
 ## POD
 
 分类：自主Pod，控制器管理的Pod
+
+
+
+
+
+## 常见指令
+
+#### kubectl
+
+```shell
+# view the nodes in the cluster
+kubectl get nodes 
+
+# create a deployment,name it kubernetes-bootcamp which image is from grc.io/....
+kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+
+# list your deployments 
+kubectl get deployments
+```
+
+
+
+##### kubectl get pods 
+
+列出pods资源
+
+**kubectl describe** 展示某个资源的详细信息
+
+**kubectl logs** 打印pod中某个container的log
+
+**kubectl exec** 在pod中某个container执行一个指令，
+
+例如 kubectl exec $POD_NAME env 可以查看pod的环境变量env
+
+例如 kubectl exec -ti $POD_NAME bash  可以进入pod中的container的bash内
+
+[参考](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-interactive/)
